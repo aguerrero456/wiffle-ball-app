@@ -1,8 +1,16 @@
  <div class ="border-bottom">
+
   <h4>
     {{player['Fname']}}
   </h4>
- </div>
+</div>
+       <div>
+      {% if 'TC' in player %}
+      {% if player['TC'] =='true' %}
+      <img src="https://wiffle-ball-app.alfredoguerrer3.repl.co/static/teamcc.gif" width='175px' height='150px'>
+      {% endif %}
+   {% endif %}
+       </div>
 <div>
   {{player['B/T']}}
 </div>
@@ -15,11 +23,4 @@
   {% if 'Nname' in player %}
    Nickname: {{player['Nname']}}
   {% endif %}
-</div>
-<div>
-    {% if 'TC' in player %}
-      {% if player['TC'] =='true' %}
-      <button class="text-success" style="background-image: linear-gradient(to right, gold, white)"> TEAM CAPTAIN</button>
-      {% endif %}
-   {% endif %}
 </div>

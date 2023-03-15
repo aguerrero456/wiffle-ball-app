@@ -14,12 +14,19 @@ PLAYERS = [{
   'Fname': 'Fred',
   'B/T': 'R/R',
   'TC': 'false'
+}, {
+  'id': 3,
+  'Fname': 'Chris',
+  'B/T': 'R/R',
+  'Spitch': 'Boozer',
+  'TC': 'true'
 }]
 
 
 @app.route("/")
 def hello_world():
   return render_template('home.html', players=PLAYERS)
+
 
 @app.route("/api/players")
 def list_players():
