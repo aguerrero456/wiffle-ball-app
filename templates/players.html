@@ -1,0 +1,25 @@
+ <div class ="border-bottom">
+  <h4>
+    {{player['Fname']}}
+  </h4>
+ </div>
+<div>
+  {{player['B/T']}}
+</div>
+<div>
+  {% if 'Spitch' in player %}
+   Signature Pitch: {{player['Spitch']}}
+  {% endif %}
+</div>
+<div>
+  {% if 'Nname' in player %}
+   Nickname: {{player['Nname']}}
+  {% endif %}
+</div>
+<div>
+    {% if 'TC' in player %}
+      {% if player['TC'] =='true' %}
+      <p class="text-success"> TEAM CAPTAIN</p>
+      {% endif %}
+   {% endif %}
+</div>
