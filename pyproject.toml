@@ -8,6 +8,10 @@ authors = ["Replit user <<>>"]
 python = "^3.10"
 Flask = "^2.2.3"
 SQLAlchemy = "^2.0.7"
+xds-protos = "^0.0.11"
+bs4 = "^0.0.1"
+google-api-python-client = "^2.82.0"
+google-auth-oauthlib = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 
+
 app = Flask(__name__)
 
 PLAYERS = [{
@@ -24,7 +25,7 @@ PLAYERS = [{
 
 
 @app.route("/")
-def hello_world():
+def players():
   return render_template('home.html', players=PLAYERS)
 
 
