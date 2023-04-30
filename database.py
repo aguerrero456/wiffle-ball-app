@@ -16,3 +16,4 @@ def load_player_info():
     for row in result.all():
       player_info.append(dict(row._mapping))
     return player_info
+
