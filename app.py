@@ -1,8 +1,9 @@
 from flask import Flask, render_template, jsonify
+from database import load_player_info
 
 
 app = Flask(__name__)
-
+'''
 PLAYERS = [{
   'id': 1,
   'Fname': 'Aaron',
@@ -22,16 +23,22 @@ PLAYERS = [{
   'Spitch': 'Boozer',
   'TC': 'true'
 }]
+'''
+
+
+
 
 
 @app.route("/")
 def players():
-  return render_template('home.html', players=PLAYERS)
+  players = load_player_info()
+  return render_template('home.html', players=players)
 
 
 @app.route("/api/players")
 def list_players():
-  return jsonify(PLAYERS)
+  player_info = load_player_info
+  return jsonify(player_info)
 
 
 if __name__ == "__main__":

@@ -1,26 +1,26 @@
  <div class ="border-bottom">
 
   <h4>
-    {{player['Fname']}}
+    {{player['FName']}}
   </h4>
 </div>
        <div>
-      {% if 'TC' in player %}
-      {% if player['TC'] =='true' %}
+      {% if 'TeamCaptain' in player %}
+      {% if player['TeamCaptain'] == 1 %}
       <img src="https://wiffle-ball-app.alfredoguerrer3.repl.co/static/teamcc.gif" width='175px' height='150px'>
       {% endif %}
    {% endif %}
        </div>
 <div>
-  {{player['B/T']}}
+  {{player['BatsThrows']}}
 </div>
 <div>
-  {% if 'Spitch' in player %}
-   Signature Pitch: {{player['Spitch']}}
+  {% if 'ERA' in player %}
+   ERA: {{player['ERA']}}
   {% endif %}
 </div>
 <div>
-  {% if 'Nname' in player %}
-   Nickname: {{player['Nname']}}
+  {% if 'NName' in player %}
+   Nickname: {{player['NName']}}
   {% endif %}
 </div>
